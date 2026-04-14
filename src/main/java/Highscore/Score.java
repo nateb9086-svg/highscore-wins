@@ -9,18 +9,28 @@ public class Score {
 
 
 
-        System.out.println("Score for Sheets My Wife ");
+        System.out.println("Score for Sheetz My Wife ");
         int teamscore1 = sc.nextInt();
         System.out.println("Score for Wawa Venus");
         int teamscore2 = sc.nextInt();
 
-        String input = ("Sheets My Wife:Wawa Venus|" + teamscore1 + ":" + teamscore2);
+        String input = ("Sheetz My Wife:Wawa Venus|" + teamscore1 + ":" + teamscore2);
         String[] splitInput = input.split(Pattern.quote( "|"));
-        String scores = splitInput[1];
         String[] splitScores = splitInput[1].split(Pattern.quote(":"));
 
-        int finalscore1 = Integer.parseInt(splitScores[0]);
-        int finalscore2 = Integer.parseInt(splitScores[1]);
+        int finalScore1 = Integer.parseInt(splitScores[0]);
+        int finalScore2 = Integer.parseInt(splitScores[1]);
+
+        System.out.println(input);
+
+
+        if (finalScore1 > finalScore2) {
+            System.out.println("Give it up for Sheetz My Wife!");
+        }
+        else {
+            System.out.print("Give it up for Wawa Venus!");
+
+        }
 
 
 
